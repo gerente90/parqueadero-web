@@ -52,11 +52,11 @@ form.addEventListener('submit', async (e) => {
 
         const result = await response.json();
         if (result.status === 'success') {
-            mensaje.textContent = 'Registro guardado exitosamente. Redirigiendo a Reglamento...';
+            mensaje.textContent = 'Registro guardado exitosamente. Contactate con el administrador para enviarte las claves de acceso.';
             mensaje.className = 'success'; // Cambia a clase success
             setTimeout(() => {
                 window.location.href = 'reglamento.html';
-            }, 5000); // Redirige después de 5 segundos
+            }, 7000); // Redirige después de 7 segundos
         } else {
             mensaje.textContent = 'Error al guardar en el servidor.';
             mensaje.className = 'error';
