@@ -32,27 +32,35 @@ form.addEventListener('submit', async (e) => {
         return;
     }
 
-    const data = {
-        nombreApellido,
-        cedula,
-        celular,
-        marcaAuto,
-        placaAuto,
-        colorAuto
-    };
+    const data = new URLSearchParams();
+    data.append('nombreApellido', nombreApellido);
+    data.append('cedula', cedula);
+    data.append('celular', celular);
+    data.append('marcaAuto', marcaAuto);
+    data.append('placaAuto', placaAuto);
+    data.append('colorAuto', colorAuto);
 
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycby8cqYSGNOtEOidmxW-7b4BL4OlOknvJTUPV3t3nAHSJq_RAVPS1X_YprQUwZuG7W2t2A/exec', {
+        const response = await fetch('https://script.google.com/macros/library/d/1Gcw70hNA2kh2fG5FfLIEhU-ZBwK6GIy1b9WOiGD73nbNWkdp4qXHTH77/3', {
             method: 'POST',
-            body: JSON.stringify(data),
-            headers: { 'Content-Type': 'application/json' },
-            //mode: 'no-cors' // Para localhost
+            body: data
         });
 
-        // Con 'no-cors', no podemos leer la respuesta, pero los datos deberían guardarse
-        mensaje.textContent = 'Registro exitoso. Comunicate con el administrador para obtener tus claves de acceso.';
-        mensaje.className = '';
-        form.reset();
+        if (!response.ok) {
+            throw new Error(`Error HTTP: ${response.status} ${response.statusText}`);
+        }
+
+        const result = await response.json();
+        if (result.status === 'success') {
+            mensaje.textContent = 'Registro guardado exitosamente. Redirigiendo a Reglamento...';
+            mensaje.className = '';
+            setTimeout(() => {
+                window.location.href = 'reglamento.html';
+            }, 2000); // Redirige después de 2 segundos
+        } else {
+            mensaje.textContent = 'Error al guardar en el servidor.';
+            mensaje.className = 'error';
+        }
     } catch (error) {
         mensaje.textContent = `Error: ${error.message}`;
         mensaje.className = 'error';
