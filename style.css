@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('https://static.latamautos.com/ghost/uploads/sites/8/2019/01/29222121/Best-Full-Team-Cars-Sport-HD-Wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background: #d1d9e6;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #333;
+    margin: 0;
+}
+
+header p {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav a {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background: #e0e5ec;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 4px 4px 8px #c2c8d0, -4px -4px 8px #ffffff;
+    transition: 0.3s;
+}
+
+nav a.active {
+    background: #c2c8d0;
+    box-shadow: inset 2px 2px 5px #bec4cb, inset -2px -2px 5px #f0f5fa;
+}
+
+nav a:hover {
+    background: #d6dce4;
+}
+
+section#reglas, section#reglamento {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section#reglas h2, section#reglamento h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+section#reglas ul, section#reglamento ul {
+    padding-left: 20px;
+    font-size: 1em;
+    color: #666;
+    text-align: left;
+}
+
+section#reglas li, section#reglamento li {
+    margin-bottom: 10px;
+}
+
+.container {
+    background: #e0e5ec; /* Fondo blanco/neumórfico */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px #c2c8d0, -10px -10px 30px #ffffff;
+    width: 400px; /* Tarjeta ancha */
+    max-width: 90%;
+    margin-bottom: 40px;
+}
+
+section#registro h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+section#registro p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #e0e5ec;
+    box-shadow: inset 4px 4px 6px #c8ccd1, inset -4px -4px 6px #f0f5fa;
+    font-size: 0.9em;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 12px;
+    background: #e0e5ec;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 6px 6px 10px #c2c8d0, -6px -6px 10px #ffffff;
+    transition: 0.3s;
+    font-size: 0.9em;
+}
+
+.btn:hover {
+    background: #d6dce4;
+}
+
+#mensaje {
+    margin-top: 15px;
+    font-size: 0.85em;
+    text-align: center;
+}
+
+.error {
+    color: red;
+}
+
+footer {
+    background: #d1d9e6;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 5px 0;
+}

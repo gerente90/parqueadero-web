@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parqueadero Urban Retreat - Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Parqueadero Urban Retreat</h1>
+        <p>Tu espacio seguro para estacionar.</p>
+        <nav>
+            <a href="index.html" class="active">Registro</a>
+            <a href="reglamento.html">Reglamento</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="registro">
+            <h2>Registro de Vehículo</h2>
+            <p>Completa el formulario para registrar tu auto.</p>
+            <p>Ingresa tu informacion correcta, caso contrario tendras que volver a llenarlo.</p>
+            <form id="formRegistro" class="form">
+                <input type="text" id="nombreApellido" placeholder="Nombre y Apellido" required maxlength="100">
+                <input type="text" id="cedula" placeholder="Cédula" required maxlength="10">
+                <input type="tel" id="celular" placeholder="Celular" required maxlength="10">
+                <input type="text" id="marcaAuto" placeholder="Marca del Auto" required maxlength="50">
+                <input type="text" id="placaAuto" placeholder="Placa del Auto" required maxlength="10">
+                <input type="text" id="colorAuto" placeholder="Color del Auto" required maxlength="50">
+                <button type="submit" class="btn">Confirmar Registro</button>
+                <div id="mensaje"></div>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>Todos los derechos reservados &copy; 2025</p>
+        <p>Desarrollado por Jefferson B.</p>
+        <p>WhatsApp: +593 978632913</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
