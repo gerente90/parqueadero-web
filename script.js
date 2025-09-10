@@ -27,7 +27,7 @@ form.addEventListener('submit', async (e) => {
 
     // Validación de Placa: alfanumérico
     if (!/^[a-zA-Z0-9]+$/.test(placaAuto)) {
-        mensaje.textContent = 'La placa solo puede contener letras y números.';
+        mensaje.textContent = 'La placa solo puede contener letras y números, sin espacios.';
         mensaje.className = 'error';
         return;
     }
@@ -52,7 +52,7 @@ form.addEventListener('submit', async (e) => {
 
         const result = await response.json();
         if (result.status === 'success') {
-            mensaje.textContent = 'Registro guardado exitosamente. Contactate con el administrador para enviarte las claves de acceso.';
+            mensaje.textContent = 'Registro guardado exitosamente. Contactate con el administrador por WhatsApp para enviarte las claves de acceso.';
             mensaje.className = 'success'; // Cambia a clase success
             setTimeout(() => {
                 window.location.href = 'reglamento.html';
