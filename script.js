@@ -40,6 +40,10 @@ form.addEventListener('submit', async (e) => {
     data.append('placaAuto', placaAuto);
     data.append('colorAuto', colorAuto);
 
+    // Mostrar mensaje de éxito inmediatamente
+    mensaje.textContent = 'Registro guardado exitosamente. Contactate con el administrador por WhatsApp para enviarte las claves de acceso.';
+    mensaje.className = 'success';
+
     try {
         const response = await fetch('https://script.google.com/macros/s/AKfycbzQnKveuc5tsxg6-n_zojDUrJg1RTMY1c7WpvqluhfAQWOAYMgOYU9NejjqakSyOGcx1Q/exec', {
             method: 'POST',
@@ -52,13 +56,12 @@ form.addEventListener('submit', async (e) => {
 
         const result = await response.json();
         if (result.status === 'success') {
-            mensaje.textContent = 'Registro guardado exitosamente. Contactate con el administrador por WhatsApp para enviarte las claves de acceso.';
-            mensaje.className = 'success'; // Cambia a clase success
+            // Redirigir después de 7 segundos
             setTimeout(() => {
                 window.location.href = 'reglamento.html';
-            }, 7000); // Redirige después de 7 segundos
+            }, 7000);
         } else {
-            mensaje.textContent = 'Error al guardar en el servidor.';
+            mensaje.textContent = 'Error al guardar en el servidor, por favor intentalo nuevamente';
             mensaje.className = 'error';
         }
     } catch (error) {
