@@ -41,7 +41,7 @@ form.addEventListener('submit', async (e) => {
     data.append('colorAuto', colorAuto);
 
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycby8cqYSGNOtEOidmxW-7b4BL4OlOknvJTUPV3t3nAHSJq_RAVPS1X_YprQUwZuG7W2t2A/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbzQnKveuc5tsxg6-n_zojDUrJg1RTMY1c7WpvqluhfAQWOAYMgOYU9NejjqakSyOGcx1Q/exec', {
             method: 'POST',
             body: data
         });
