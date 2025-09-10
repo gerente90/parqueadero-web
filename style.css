@@ -148,6 +148,12 @@ input::placeholder {
     color: red;
 }
 
+.success {
+    color: #28a745; /* Verde */
+    font-size: 1.2em; /* Letras más grandes */
+    font-weight: bold;
+}
+
 footer {
     background: #d1d9e6;
     padding: 20px;
