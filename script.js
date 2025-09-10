@@ -56,10 +56,10 @@ form.addEventListener('submit', async (e) => {
 
         const result = await response.json();
         if (result.status === 'success') {
-            // Redirigir después de 7 segundos
+            // Redirigir después de 3 segundos
             setTimeout(() => {
                 window.location.href = 'reglamento.html';
-            }, 7000);
+            }, 3000);
         } else {
             mensaje.textContent = 'Error al guardar en el servidor, por favor intentalo nuevamente';
             mensaje.className = 'error';
